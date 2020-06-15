@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch</title>
+</head>
+<body>
+    <h1 id="faculty"></h1>
+    
+</body>
+<script>
+    let element = document.getElementById('faculty');
+    fetch('/api/fac').then(res =>{ 
+      res.text().then(text => {element.append(text);});});
+</script>
+</html>
